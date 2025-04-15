@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Raleway:wght@400&family=Abril+Fatface&family=Bangers&family=Cinzel:wght@700&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('assets/ghibli.jpg') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.brand img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #ffffff;
+}
+
+.brand-title {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nav-links {
+    display: flex;
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+nav a:hover:after {
+    width: 100%;
+}
+
+nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+nav a.active:after {
+    width: 100%;
+}
+
+.container {
+    padding: 20px;
+}
+
+.gallery {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+
+.gallery img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.gallery-title {
+    font-size: 36px;
+    font-family: 'Oswald', sans-serif;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    margin: 80px 0 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    margin-bottom: 5px;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    margin-top: 5px;
+}
+
+.blog {
+    display: none;
+    margin-top: 60px;
+    padding: 20px;
+}
+
+.blog h2 {
+    font-size: 36px;
+    font-family: 'Oswald', sans-serif;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    margin: 60px 0 20px 0;
+}
+
+.blog-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.blog-content iframe,
+.blog-content .article {
+    width: 80%;
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.blog-content iframe {
+    height: 400px;
+}
+
+.article {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.article div {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 10px;
+}
+
+.article p {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    text-align: justify;
+    padding: 0 10px;
+}
+
+.contact {
+    display: none;
+    margin-top: 60px;
+    padding: 20px;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contact-content p {
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
